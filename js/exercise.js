@@ -70,7 +70,8 @@ function deleteProductList(id) {
   //index代表目前被處理中的 Array 之中的那個元素的index.
   productData.forEach((item, index) => {
     //如果productData的id=e.target.dataset.id
-    if (item.id === id) {
+    //注意不可用嚴格模式===
+    if (item.id == id) {
       //newIndex=目前被選到的index
       newIndex = index;
     }
